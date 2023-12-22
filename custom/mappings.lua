@@ -19,19 +19,19 @@ M.dap = {
       "<cmd> DapToggleBreakpoint <CR>",
       "Add breakpoint at line",
     },
-    ["<leader>dus"] = {
-      function()
-        local widgets = require "dap.ui.widgets"
-        local sidebar = widgets.sidebar(widgets.scopes)
-        sidebar.open()
-      end,
-      "Open debugging sidebar",
-    },
-    ["<F5>"] = {
+    -- ["<leader>dus"] = {
+    --   function()
+    --     local widgets = require "dap.ui.widgets"
+    --     local sidebar = widgets.sidebar(widgets.scopes)
+    --     sidebar.open()
+    --   end,
+    --   "Open debugging sidebar",
+    -- },
+    ["<leader>dr"] = {
       function()
         require("dap").continue()
       end,
-      "Continue debugging",
+      "Start or continue debugging",
     },
     ["<F10>"] = {
       function()
@@ -51,9 +51,9 @@ M.dap = {
       end,
       "Step out",
     },
-    ["<F6>"] = {
+    ["<leader>dt"] = {
       "<cmd> DapTerminate <CR>",
-      "Add breakpoint at line",
+      "Terminate debugger session",
     },
   },
 }
